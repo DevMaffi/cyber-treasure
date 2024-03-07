@@ -1,0 +1,60 @@
+@forward 'normalize';
+@forward 'variables';
+
+*,
+::before,
+::after {
+    border-width: var(--border-0);
+    border-style: solid;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+    margin: var(--m-0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: var(--m-0);
+    padding: var(--p-0);
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    vertical-align: middle;
+}
+
+img,
+video {
+    max-width: var(--w-full);
+    height: var(--h-auto);
+}

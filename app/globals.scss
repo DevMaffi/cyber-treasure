@@ -1,0 +1,73 @@
+@use 'styles/base';
+
+@use 'styles/utils';
+
+* {
+    border-color: hsl(var(--col-border));
+}
+
+html {
+    font-size: 16px; /* 1rem */
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: var(--h-screen);
+    background-color: hsl(var(--col-background));
+    color: hsl(var(--col-foreground));
+
+    @include utils.text-base;
+}
+
+h1 {
+    @include utils.text-4xl;
+}
+
+h2 {
+    @include utils.text-3xl;
+}
+
+h3 {
+    @include utils.text-2xl;
+}
+
+h4 {
+    @include utils.text-xl;
+}
+
+h5 {
+    @include utils.text-lg;
+}
+
+a {
+    color: hsl(var(--col-accent-foreground));
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    padding: var(--p-0);
+}
+
+@keyframes accordion-down {
+    from {
+        height: var(--h-0);
+    }
+
+    to {
+        height: var(--radix-accordion-content-height);
+    }
+}
+
+@keyframes accordion-up {
+    from {
+        height: var(--radix-accordion-content-height);
+    }
+
+    to {
+        height: var(--h-0);
+    }
+}
