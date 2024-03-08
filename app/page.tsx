@@ -1,17 +1,32 @@
 import Link from 'next/link'
 
-import { Button, Typography } from '@/components/ui'
+import type { Variants } from 'framer-motion'
+
+import { Typography } from '@/components/ui'
+import { MButton } from '@/components/ui/motion'
 
 import styles from './page.module.scss'
+
+const buttonVariants: Variants = {
+    hover: {
+        scale: 1.1,
+    },
+}
 
 export default function Home() {
     return (
         <main className={styles.main}>
             <div className={styles.container}>
                 <Typography.H2>Cyber-Treasure</Typography.H2>
-                <Button variant={'outline'} asChild>
+                <MButton
+                    variants={buttonVariants}
+                    initial={false}
+                    whileHover={'hover'}
+                    variant={'outline'}
+                    asChild
+                >
                     <Link href={'/app'}>Open App</Link>
-                </Button>
+                </MButton>
             </div>
         </main>
     )
