@@ -1,0 +1,107 @@
+@use 'styles/utils';
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--rounded-2xl);
+    font-weight: var(--font-medium);
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+
+    @include utils.text-sm;
+    @include utils.transition-colors;
+
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+.btnDefaultVariant {
+    background-color: hsl(var(--col-primary));
+    box-shadow: var(--shadow);
+    color: hsl(var(--col-primary-foreground));
+
+    &:hover {
+        background-color: hsl(var(--col-primary) / 0.9);
+    }
+}
+
+.btnDestructiveVariant {
+    background-color: hsl(var(--col-destructive));
+    box-shadow: var(--shadow-sm);
+    color: hsl(var(--col-destructive-foreground));
+
+    &:hover {
+        background-color: hsl(var(--col-destructive) / 0.9);
+    }
+}
+
+.btnOutlineVariant {
+    background-color: hsl(var(--col-background));
+    border-width: var(--border);
+    border-color: hsl(var(--col-input));
+    box-shadow: var(--shadow-sm);
+
+    &:hover {
+        background-color: hsl(var(--col-accent));
+        color: hsl(var(--col-accent-foreground));
+    }
+}
+
+.btnSecondaryVariant {
+    background-color: hsl(var(--col-secondary));
+    box-shadow: var(--shadow-sm);
+    color: hsl(var(--col-secondary-foreground));
+
+    &:hover {
+        background-color: hsl(var(--col-secondary) / 0.8);
+    }
+}
+
+.btnGhostVariant {
+    background-color: transparent;
+    color: inherit;
+
+    &:hover {
+        background-color: hsl(var(--col-accent));
+        color: hsl(var(--col-accent-foreground));
+    }
+}
+
+.btnLinkVariant {
+    background-color: transparent;
+    color: hsl(var(--col-primary));
+    text-underline-offset: var(--underline-offset-4);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.btnDefaultSize {
+    height: var(--h-9);
+    padding-block: var(--p-2);
+    padding-inline: var(--p-4);
+}
+
+.btnSmSize {
+    height: var(--h-8);
+    padding-inline: var(--p-3);
+    border-radius: var(--rounded-2xl);
+
+    @include utils.text-xs;
+}
+
+.btnLgSize {
+    height: var(--h-10);
+    padding-inline: var(--p-8);
+    border-radius: var(--rounded-2xl);
+}
+
+.btnIconSize {
+    aspect-ratio: 1;
+    width: var(--w-9);
+}

@@ -1,0 +1,12 @@
+.main {
+    min-height: var(--h-screen);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: var(--gap-3-5);
+    min-height: var(--h-screen);
+}

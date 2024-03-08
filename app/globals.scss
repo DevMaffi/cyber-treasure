@@ -40,8 +40,12 @@ h5 {
 }
 
 a {
-    color: hsl(var(--col-accent-foreground));
+    color: hsl(var(--col-primary));
     text-decoration: none;
+}
+
+button {
+    color: inherit;
 }
 
 table {
