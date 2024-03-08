@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import type { Variants } from 'framer-motion'
 
 import { Typography } from '@/components/ui'
@@ -23,9 +21,8 @@ export default function Home() {
                     initial={false}
                     whileHover={'hover'}
                     variant={'outline'}
-                    asChild
                 >
-                    <Link href={'/app'}>Open App</Link>
+                    Open App
                 </MButton>
             </div>
         </main>

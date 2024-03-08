@@ -44,6 +44,7 @@
     border-width: var(--border);
     border-color: hsl(var(--col-input));
     box-shadow: var(--shadow-sm);
+    color: inherit;
 
     &:hover {
         background-color: hsl(var(--col-accent));
