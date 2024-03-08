@@ -1,3 +1,5 @@
+import { Typography } from '@/components/ui'
+
 export default function Home() {
-    return <h1>Cyber-Treasure</h1>
+    return <Typography.H1>Cyber-Treasure</Typography.H1>
 }

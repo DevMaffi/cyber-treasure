@@ -1,0 +1,131 @@
+@use 'styles/utils';
+@use 'styles/utils/media' as *;
+
+$default-scroll-margin: 5rem; /* 80px */
+
+.heading1 {
+    scroll-margin: $default-scroll-margin;
+    font-weight: var(--font-extrabold);
+    letter-spacing: var(--tracking-tight);
+
+    @include utils.text-4xl;
+
+    @include lg {
+        @include utils.text-5xl;
+    }
+}
+
+.heading2 {
+    scroll-margin: $default-scroll-margin;
+    font-weight: var(--font-semibold);
+    letter-spacing: var(--tracking-tight);
+
+    @include utils.text-3xl;
+
+    &:first-child {
+        margin-block-start: var(--m-0);
+    }
+}
+
+.heading3 {
+    scroll-margin: $default-scroll-margin;
+    font-weight: var(--font-semibold);
+    letter-spacing: var(--tracking-tight);
+
+    @include utils.text-2xl;
+}
+
+.heading4 {
+    scroll-margin: $default-scroll-margin;
+    font-weight: var(--font-semibold);
+    letter-spacing: var(--tracking-tight);
+
+    @include utils.text-xl;
+}
+
+.paragraph {
+    line-height: var(--leading-7);
+
+    :where(&:not(:first-child)) {
+        margin-block-start: var(--m-6);
+    }
+}
+
+.blockquote {
+    margin-block-start: var(--m-6);
+    padding-inline-start: var(--p-6);
+    border-left-width: var(--border-2);
+    font-style: italic;
+}
+
+.th,
+.td {
+    padding-block: var(--p-2);
+    padding-inline: var(--p-4);
+    border-width: var(--border);
+    text-align: left;
+
+    &[align='center'] {
+        text-align: center;
+    }
+
+    &[align='right'] {
+        text-align: right;
+    }
+}
+
+.th {
+    font-weight: var(--font-bold);
+}
+
+.list {
+    margin-block: var(--m-6);
+    margin-inline-start: var(--m-6);
+    list-style: disc;
+}
+
+.listItem {
+    :where(&:not(:first-child)) {
+        margin-block-start: var(--m-2);
+    }
+}
+
+.inlineCode {
+    $padding-block: 0.2rem;
+    $padding-inline: 0.3rem;
+
+    position: relative;
+    padding-block: $padding-block;
+    padding-inline: $padding-inline;
+    background-color: hsl(var(--col-muted));
+    border-radius: var(--rounded-sm);
+    font-family: var(--font-mono);
+    font-weight: var(--font-semibold);
+
+    @include utils.text-sm;
+}
+
+.lead {
+    color: hsl(var(--col-muted-foreground));
+
+    @include utils.text-xl;
+}
+
+.large {
+    font-weight: var(--font-semibold);
+
+    @include utils.text-lg;
+}
+
+.small {
+    font-weight: var(--font-medium);
+
+    @include utils.text-sm;
+    line-height: var(--leading-none);
+}
+
+.muted {
+    color: hsl(var(--col-muted-foreground));
+
+    @include utils.text-sm;
+}
