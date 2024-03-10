@@ -10,7 +10,7 @@ import './globals.scss'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: 'Cyber-Treasure',
+    title: 'Cyber-Treasure · Unleash the Gamer Within',
 }
 
 type RootLayoutProps = Readonly<{
