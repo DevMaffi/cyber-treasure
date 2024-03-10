@@ -1,11 +1,7 @@
-import React from 'react'
+import type { RefCmpWithReadonlyProps } from '@/types/components'
 
-import type { DefaultCmpMeta } from '@/types/globals'
+export type ButtonProps<T> = T & {
+    asChild?: boolean
+}
 
-export type ButtonProps<T> = React.ComponentPropsWithRef<'button'> &
-    T & {
-        asChild?: boolean
-    }
-
-export type ButtonCmp<T> = React.ExoticComponent<Readonly<ButtonProps<T>>> &
-    DefaultCmpMeta
+export type ButtonCmp<T> = RefCmpWithReadonlyProps<'button', ButtonProps<T>>

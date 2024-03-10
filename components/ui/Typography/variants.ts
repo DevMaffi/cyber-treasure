@@ -1,9 +1,6 @@
-import React from 'react'
+import type { CmpStylesRecord, RefCmpWithElements } from '@/types/components'
 
-import type { DefaultCmpMeta } from '@/types/globals'
-import type { ValueOf } from '@/types/utils'
-
-export const TEXT_TYPES = {
+export const TYPOGRAPHY_ELEMENTS = {
     H1: 'h1',
     H2: 'h2',
     H3: 'h3',
@@ -21,17 +18,11 @@ export const TEXT_TYPES = {
     Muted: 'p',
 } as const
 
-export type TextType = ValueOf<typeof TEXT_TYPES>
+export type TypographyCmp = RefCmpWithElements<
+    'div',
+    typeof TYPOGRAPHY_ELEMENTS
+>
 
-export type TypographyElements<T extends Record<string, TextType>> = {
-    -readonly [P in keyof T]: React.ExoticComponent<
-        Readonly<React.ComponentPropsWithRef<T[P]>>
-    > &
-        DefaultCmpMeta
-}
-
-export type TypographyProps = React.ComponentPropsWithRef<'div'>
-
-export type TypographyCmp = React.ExoticComponent<Readonly<TypographyProps>> &
-    TypographyElements<typeof TEXT_TYPES> &
-    DefaultCmpMeta
+export type TypographyStylesRecord = CmpStylesRecord<
+    keyof typeof TYPOGRAPHY_ELEMENTS
+>
