@@ -1,0 +1,24 @@
+@use 'styles/utils';
+@use 'styles/utils/media' as *;
+
+$page-offset: var(--m-10);
+$page-md-offset: 5rem; /* 80px */
+
+.main {
+    min-height: var(--h-screen);
+}
+
+.container {
+    margin-block: $page-offset;
+
+    @include utils.container(var(--container-md));
+
+    @include lg {
+        margin-block: $page-md-offset;
+    }
+}
+
+.article p,
+.article li {
+    text-align: justify;
+}
