@@ -3,6 +3,10 @@
 
 $default-scroll-margin: 5rem; /* 80px */
 
+.flow > * + * {
+    margin-block-start: var(--flow-spacer, 1.5em);
+}
+
 .heading1 {
     scroll-margin: $default-scroll-margin;
     font-weight: var(--font-extrabold);
@@ -95,6 +99,7 @@ $default-scroll-margin: 5rem; /* 80px */
     $padding-inline: 0.3rem;
 
     position: relative;
+    display: inline-block;
     padding-block: $padding-block;
     padding-inline: $padding-inline;
     background-color: hsl(var(--col-muted));
@@ -118,9 +123,11 @@ $default-scroll-margin: 5rem; /* 80px */
 }
 
 .small {
+    display: inline-block;
     font-weight: var(--font-medium);
 
     @include utils.text-sm;
+
     line-height: var(--leading-none);
 }
 
