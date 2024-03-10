@@ -1,0 +1,6 @@
+$padding-inline: var(--p-5);
+
+@mixin container($max-content-width) {
+    width: min($max-content-width, calc(100% - ($padding-inline * 2)));
+    margin-inline: var(--m-auto);
+}
