@@ -1,0 +1,13 @@
+.textTable {
+    width: var(--w-full);
+}
+
+.tr {
+    margin: var(--m-0);
+    padding: var(--p-0);
+    border-top-width: var(--border);
+
+    &:nth-child(even) {
+        background-color: hsl(var(--col-muted));
+    }
+}
