@@ -1,4 +1,23 @@
-import { TextTable, Typography } from '@/components/ui'
+import {
+    Typography,
+    TypographyBlockquote,
+    TypographyH1,
+    TypographyH3,
+    TypographyLarge,
+    TypographyList,
+    TypographyListItem,
+    TypographyP,
+    TypographySmall,
+    TypographyTd,
+    TypographyTh,
+} from '@/components/ui/Typography'
+
+import {
+    TextTable,
+    TextTableBody,
+    TextTableHead,
+    TextTableTr,
+} from '@/components/ui/TextTable'
 
 import styles from './page.module.scss'
 
@@ -8,121 +27,121 @@ export default function About() {
             <div className={styles.container}>
                 <article className={styles.article}>
                     <Typography>
-                        <Typography.H1>Cyber-Treasure</Typography.H1>
-                        <Typography.H3>Unleash the Gamer Within</Typography.H3>
-                        <Typography.Blockquote>
+                        <TypographyH1>Cyber-Treasure</TypographyH1>
+                        <TypographyH3>Unleash the Gamer Within</TypographyH3>
+                        <TypographyBlockquote>
                             &quot;Millions of Games at Your Fingertips&quot;
-                        </Typography.Blockquote>
-                        <Typography.P>
+                        </TypographyBlockquote>
+                        <TypographyP>
                             Cyber-Treasure is your one-stop shop for all things
                             gaming, offering a vast library of games across
                             diverse genres and platforms. Dive into endless
                             possibilities, from heart-pounding adventures to
                             adrenaline-pumping action and everything in between.
-                        </Typography.P>
-                        <Typography.Large>
+                        </TypographyP>
+                        <TypographyLarge>
                             Explore a Universe of Entertainment:
-                        </Typography.Large>
-                        <Typography.List>
-                            <Typography.ListItem>
+                        </TypographyLarge>
+                        <TypographyList>
+                            <TypographyListItem>
                                 Unmatched Selection: Discover a treasure trove
                                 of games, including popular titles, indie gems,
                                 and hidden classics, catering to every
                                 gamer&apos;s taste.
-                            </Typography.ListItem>
-                            <Typography.ListItem className={styles.subFlow}>
+                            </TypographyListItem>
+                            <TypographyListItem className={styles.subFlow}>
                                 Platform Agnostic: Find your perfect game,
                                 whether you prefer console classics, captivating
                                 PC titles, or mobile gaming on the go.
-                            </Typography.ListItem>
-                            <Typography.ListItem>
+                            </TypographyListItem>
+                            <TypographyListItem>
                                 Curated Collections: Let our expert
                                 recommendations and user reviews guide you
                                 towards your next gaming obsession.
-                            </Typography.ListItem>
-                        </Typography.List>
-                        <Typography.H3>Beyond the Games</Typography.H3>
-                        <Typography.P>
+                            </TypographyListItem>
+                        </TypographyList>
+                        <TypographyH3>Beyond the Games</TypographyH3>
+                        <TypographyP>
                             Community Hub: Connect with fellow gamers, share
                             experiences, and forge friendships within the
                             vibrant Cyber-Treasure community.
-                        </Typography.P>
-                        <Typography.P>
+                        </TypographyP>
+                        <TypographyP>
                             News and Updates: Stay informed about the latest
                             gaming releases, industry news, and exclusive
                             content with our dedicated newsfeed.
-                        </Typography.P>
-                        <Typography.P>
+                        </TypographyP>
+                        <TypographyP>
                             Personalized Experience: Create your profile, track
                             your progress, and build your unique gaming library,
                             all within the app.
-                        </Typography.P>
+                        </TypographyP>
                         <TextTable>
-                            <TextTable.Thead>
-                                <TextTable.Tr>
-                                    <Typography.Th>Feature</Typography.Th>
-                                    <Typography.Th>Description</Typography.Th>
-                                </TextTable.Tr>
-                            </TextTable.Thead>
-                            <TextTable.Tbody>
-                                <TextTable.Tr>
-                                    <Typography.Td>
+                            <TextTableHead>
+                                <TextTableTr>
+                                    <TypographyTh>Feature</TypographyTh>
+                                    <TypographyTh>Description</TypographyTh>
+                                </TextTableTr>
+                            </TextTableHead>
+                            <TextTableBody>
+                                <TextTableTr>
+                                    <TypographyTd>
                                         Vast Game Library
-                                    </Typography.Td>
-                                    <Typography.Td>
+                                    </TypographyTd>
+                                    <TypographyTd>
                                         Millions of games across various genres
                                         and platforms
-                                    </Typography.Td>
-                                </TextTable.Tr>
-                                <TextTable.Tr>
-                                    <Typography.Td>
+                                    </TypographyTd>
+                                </TextTableTr>
+                                <TextTableTr>
+                                    <TypographyTd>
                                         Platform Agnostic
-                                    </Typography.Td>
-                                    <Typography.Td>
+                                    </TypographyTd>
+                                    <TypographyTd>
                                         Find games for consoles, PC, and mobile
                                         devices
-                                    </Typography.Td>
-                                </TextTable.Tr>
-                                <TextTable.Tr>
-                                    <Typography.Td>
+                                    </TypographyTd>
+                                </TextTableTr>
+                                <TextTableTr>
+                                    <TypographyTd>
                                         Curated Recommendations
-                                    </Typography.Td>
-                                    <Typography.Td>
+                                    </TypographyTd>
+                                    <TypographyTd>
                                         Expert picks and user reviews to help
                                         you discover gems
-                                    </Typography.Td>
-                                </TextTable.Tr>
-                                <TextTable.Tr>
-                                    <Typography.Td>Community Hub</Typography.Td>
-                                    <Typography.Td>
+                                    </TypographyTd>
+                                </TextTableTr>
+                                <TextTableTr>
+                                    <TypographyTd>Community Hub</TypographyTd>
+                                    <TypographyTd>
                                         Connect with fellow gamers and build
                                         friendships
-                                    </Typography.Td>
-                                </TextTable.Tr>
-                                <TextTable.Tr>
-                                    <Typography.Td>
+                                    </TypographyTd>
+                                </TextTableTr>
+                                <TextTableTr>
+                                    <TypographyTd>
                                         News and Updates
-                                    </Typography.Td>
-                                    <Typography.Td>
+                                    </TypographyTd>
+                                    <TypographyTd>
                                         Stay informed about the latest gaming
                                         news and releases
-                                    </Typography.Td>
-                                </TextTable.Tr>
-                                <TextTable.Tr>
-                                    <Typography.Td>
+                                    </TypographyTd>
+                                </TextTableTr>
+                                <TextTableTr>
+                                    <TypographyTd>
                                         Personalized Experience
-                                    </Typography.Td>
-                                    <Typography.Td>
+                                    </TypographyTd>
+                                    <TypographyTd>
                                         Create a profile, track progress, and
                                         build your gaming library
-                                    </Typography.Td>
-                                </TextTable.Tr>
-                            </TextTable.Tbody>
+                                    </TypographyTd>
+                                </TextTableTr>
+                            </TextTableBody>
                         </TextTable>
-                        <Typography.Small>
+                        <TypographySmall>
                             Embark on your gaming journey today and discover the
                             hidden treasures within Cyber-Treasure!
-                        </Typography.Small>
+                        </TypographySmall>
                     </Typography>
                 </article>
             </div>

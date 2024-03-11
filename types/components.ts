@@ -6,6 +6,11 @@ export type DefaultCmpMeta = {
     displayName?: string
 }
 
+export type CmpWithReadonlyProps<
+    T extends React.ElementType,
+    P = unknown,
+> = React.FC<Readonly<React.ComponentProps<T> & P>>
+
 export type RefCmpWithReadonlyProps<
     T extends React.ElementType,
     P = unknown,
@@ -18,7 +23,7 @@ export type CmpRefElements<T extends CmpElementsRecord> = {
     -readonly [P in keyof T]: RefCmpWithReadonlyProps<T[P]>
 }
 
-export type RefCmpWithElements<
+export type RefCmpWithRefElements<
     T extends React.ElementType,
     E extends CmpElementsRecord,
     P = unknown,

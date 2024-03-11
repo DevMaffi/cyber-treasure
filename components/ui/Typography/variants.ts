@@ -1,4 +1,4 @@
-import type { CmpStylesRecord, RefCmpWithElements } from '@/types/components'
+import type { CmpStylesRecord, RefCmpWithRefElements } from '@/types/components'
 
 export const TYPOGRAPHY_ELEMENTS = {
     H1: 'h1',
@@ -18,7 +18,7 @@ export const TYPOGRAPHY_ELEMENTS = {
     Muted: 'p',
 } as const
 
-export type TypographyCmp = RefCmpWithElements<
+export type TypographyCmp = RefCmpWithRefElements<
     'div',
     typeof TYPOGRAPHY_ELEMENTS
 >

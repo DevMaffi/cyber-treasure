@@ -4,30 +4,50 @@ import type { ClassValue } from 'clsx'
 
 import type {
     CmpElementsRecord,
+    CmpWithReadonlyProps,
     RefCmpWithReadonlyProps,
 } from '@/types/components'
 
 import { cn } from '@/lib/utils'
 
-export const renderRefPlainElement = <T extends React.ElementType>(
+export const renderPlainElement = <T extends React.ElementType>(
     elem: T,
     ...styles: ClassValue[]
 ) => {
-    const PlainElement = React.forwardRef((props, ref) => {
-        const { children, className, ...restProps } = props
+    const PlainElement = (props => {
+        const { className, ...restProps } = props
 
         const Comp = elem as React.ElementType
 
-        return (
-            <Comp ref={ref} className={cn(...styles, className)} {...restProps}>
-                {children}
-            </Comp>
-        )
-    }) as RefCmpWithReadonlyProps<T>
+        return <Comp className={cn(...styles, className)} {...restProps} />
+    }) as CmpWithReadonlyProps<T>
 
     PlainElement.displayName = 'PlainElement'
 
     return PlainElement
+}
+
+export const renderRefPlainElement = <T extends React.ElementType>(
+    elem: T,
+    ...styles: ClassValue[]
+) => {
+    const RefPlainElement = React.forwardRef((props, ref) => {
+        const { className, ...restProps } = props
+
+        const Comp = elem as React.ElementType
+
+        return (
+            <Comp
+                ref={ref}
+                className={cn(...styles, className)}
+                {...restProps}
+            />
+        )
+    }) as RefCmpWithReadonlyProps<T>
+
+    RefPlainElement.displayName = 'RefPlainElement'
+
+    return RefPlainElement
 }
 
 export const renderInnerElements = <T extends CmpElementsRecord>(

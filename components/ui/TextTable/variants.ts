@@ -1,4 +1,4 @@
-import type { CmpStylesRecord, RefCmpWithElements } from '@/types/components'
+import type { CmpStylesRecord, RefCmpWithRefElements } from '@/types/components'
 
 export const TEXT_TABLE_ELEMENTS = {
     Thead: 'thead',
@@ -6,7 +6,7 @@ export const TEXT_TABLE_ELEMENTS = {
     Tr: 'tr',
 } as const
 
-export type TextTableCmp = RefCmpWithElements<
+export type TextTableCmp = RefCmpWithRefElements<
     'table',
     typeof TEXT_TABLE_ELEMENTS
 >

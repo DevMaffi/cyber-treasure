@@ -1,6 +1,6 @@
 import {
     renderInnerElements,
-    renderRefPlainElement as renderElement,
+    renderRefPlainElement as renderRefElement,
 } from '@/lib/renderElement'
 
 import type {
@@ -11,7 +11,7 @@ import { TYPOGRAPHY_ELEMENTS } from '@/components/ui/Typography/variants'
 
 import styles from './Typography.module.scss'
 
-const Typography = renderElement('div', styles.flow) as TypographyCmp
+const Typography = renderRefElement('div', styles.flow) as TypographyCmp
 
 const typographyStyles: TypographyStylesRecord = {
     H1: styles.heading1,
@@ -32,7 +32,7 @@ const typographyStyles: TypographyStylesRecord = {
 }
 
 renderInnerElements(TYPOGRAPHY_ELEMENTS, (key, value) => {
-    Typography[key] = renderElement(value, typographyStyles[key])
+    Typography[key] = renderRefElement(value, typographyStyles[key])
     Typography[key].displayName = `Typography${key}`
 })
 

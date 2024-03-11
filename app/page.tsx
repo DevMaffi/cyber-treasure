@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Button } from '@/components/ui'
+import { Button } from '@/components/ui/Button'
 
 import styles from './page.module.scss'
 

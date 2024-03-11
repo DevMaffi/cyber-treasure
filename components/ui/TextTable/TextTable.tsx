@@ -1,6 +1,6 @@
 import {
     renderInnerElements,
-    renderRefPlainElement as renderElement,
+    renderRefPlainElement as renderRefElement,
 } from '@/lib/renderElement'
 
 import type {
@@ -11,7 +11,7 @@ import { TEXT_TABLE_ELEMENTS } from '@/components/ui/TextTable/variants'
 
 import styles from './TextTable.module.scss'
 
-const TextTable = renderElement('table', styles.textTable) as TextTableCmp
+const TextTable = renderRefElement('table', styles.textTable) as TextTableCmp
 
 const textTableStyles: TextTableStylesRecord = {
     Thead: undefined,
@@ -20,7 +20,7 @@ const textTableStyles: TextTableStylesRecord = {
 }
 
 renderInnerElements(TEXT_TABLE_ELEMENTS, (key, value) => {
-    TextTable[key] = renderElement(value, textTableStyles[key])
+    TextTable[key] = renderRefElement(value, textTableStyles[key])
     TextTable[key].displayName = `TextTable${key}`
 })
 
