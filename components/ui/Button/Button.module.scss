@@ -1,5 +1,18 @@
 @use 'styles/utils';
 
+// inline-flex ✓
+// items-center ✓
+// justify-center ✓
+// whitespace-nowrap ✓
+// rounded-md ~
+// text-sm ✓
+// font-medium ✓
+// transition-colors ✓
+// focus-visible:outline-none ×
+// focus-visible:ring-1 ×
+// focus-visible:ring-ring ×
+// disabled:pointer-events-none ✓
+// disabled:opacity-50 ✓
 .btn {
     display: inline-flex;
     justify-content: center;
@@ -19,6 +32,10 @@
     }
 }
 
+// bg-primary ✓
+// text-primary-foreground ✓
+// shadow ✓
+// hover:bg-primary/90 ✓
 .btnDefaultVariant {
     background-color: hsl(var(--col-primary));
     box-shadow: var(--shadow);
@@ -29,6 +46,10 @@
     }
 }
 
+// bg-destructive ✓
+// text-destructive-foreground ✓
+// shadow-sm ✓
+// hover:bg-destructive/90 ✓
 .btnDestructiveVariant {
     background-color: hsl(var(--col-destructive));
     box-shadow: var(--shadow-sm);
@@ -39,6 +60,12 @@
     }
 }
 
+// border ✓
+// border-input ✓
+// bg-background ✓
+// shadow-sm ✓
+// hover:bg-accent ✓
+// hover:text-accent-foreground ✓
 .btnOutlineVariant {
     background-color: hsl(var(--col-background));
     border-width: var(--border);
@@ -52,6 +79,10 @@
     }
 }
 
+// bg-secondary ✓
+// text-secondary-foreground ✓
+// shadow-sm ✓
+// hover:bg-secondary/80 ✓
 .btnSecondaryVariant {
     background-color: hsl(var(--col-secondary));
     box-shadow: var(--shadow-sm);
@@ -62,6 +93,8 @@
     }
 }
 
+// hover:bg-accent ✓
+// hover:text-accent-foreground ✓
 .btnGhostVariant {
     background-color: transparent;
     color: inherit;
@@ -72,6 +105,9 @@
     }
 }
 
+// text-primary ✓
+// underline-offset-4 ✓
+// hover:underline ✓
 .btnLinkVariant {
     background-color: transparent;
     color: hsl(var(--col-primary));
@@ -82,12 +118,19 @@
     }
 }
 
+// h-9 ✓
+// px-4 ✓
+// py-2 ✓
 .btnDefaultSize {
     height: var(--h-9);
     padding-block: var(--p-2);
     padding-inline: var(--p-4);
 }
 
+// h-8 ✓
+// rounded-md ~
+// px-3 ✓
+// text-xs ✓
 .btnSmSize {
     height: var(--h-8);
     padding-inline: var(--p-3);
@@ -96,12 +139,17 @@
     @include utils.text-xs;
 }
 
+// h-10 ✓
+// rounded-md ~
+// px-8 ✓
 .btnLgSize {
     height: var(--h-10);
     padding-inline: var(--p-8);
     border-radius: var(--rounded-2xl);
 }
 
+// h-9 ✓
+// w-9 ✓
 .btnIconSize {
     aspect-ratio: 1;
     width: var(--w-9);

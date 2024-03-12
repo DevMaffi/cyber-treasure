@@ -7,6 +7,11 @@ $default-scroll-margin: 5rem; /* 80px */
     margin-block-start: var(--flow-spacer, 1.5em);
 }
 
+// scroll-m-20 ✓
+// text-4xl ✓
+// font-extrabold ✓
+// tracking-tight ✓
+// lg:text-5xl ✓
 .heading1 {
     scroll-margin: $default-scroll-margin;
     font-weight: var(--font-extrabold);
@@ -19,6 +24,13 @@ $default-scroll-margin: 5rem; /* 80px */
     }
 }
 
+// scroll-m-20 ✓
+// border-b ×
+// pb-2 ×
+// text-3xl ✓
+// font-semibold ✓
+// tracking-tight ✓
+// first:mt-0 ✓
 .heading2 {
     scroll-margin: $default-scroll-margin;
     font-weight: var(--font-semibold);
@@ -31,6 +43,10 @@ $default-scroll-margin: 5rem; /* 80px */
     }
 }
 
+// scroll-m-20 ✓
+// text-2xl ✓
+// font-semibold ✓
+// tracking-tight ✓
 .heading3 {
     scroll-margin: $default-scroll-margin;
     font-weight: var(--font-semibold);
@@ -39,6 +55,10 @@ $default-scroll-margin: 5rem; /* 80px */
     @include utils.text-2xl;
 }
 
+// scroll-m-20 ✓
+// text-xl ✓
+// font-semibold ✓
+// tracking-tight ✓
 .heading4 {
     scroll-margin: $default-scroll-margin;
     font-weight: var(--font-semibold);
@@ -47,6 +67,8 @@ $default-scroll-margin: 5rem; /* 80px */
     @include utils.text-xl;
 }
 
+// leading-7 ✓
+// [&:not(:first-child)]:mt-6 ~
 .paragraph {
     line-height: var(--leading-7);
 
@@ -55,6 +77,10 @@ $default-scroll-margin: 5rem; /* 80px */
     }
 }
 
+// mt-6 ✓
+// border-l-2 ✓
+// pl-6 ✓
+// italic ✓
 .blockquote {
     margin-block-start: var(--m-6);
     padding-inline-start: var(--p-6);
@@ -62,6 +88,12 @@ $default-scroll-margin: 5rem; /* 80px */
     font-style: italic;
 }
 
+// border ✓
+// px-4 ✓
+// py-2 ✓
+// text-left ✓
+// [&[align=center]]:text-center ✓
+// [&[align=right]]:text-right ✓
 .th,
 .td {
     padding-block: var(--p-2);
@@ -78,22 +110,35 @@ $default-scroll-margin: 5rem; /* 80px */
     }
 }
 
+// font-bold ✓
 .th {
     font-weight: var(--font-bold);
 }
 
+// my-6 ✓
+// ml-6 ✓
+// list-disc ✓
 .list {
     margin-block: var(--m-6);
     margin-inline-start: var(--m-6);
     list-style: disc;
 }
 
+// [&>li]:mt-2 ~
 .listItem {
     :where(&:not(:first-child)) {
         margin-block-start: var(--m-2);
     }
 }
 
+// relative ✓
+// rounded ~
+// bg-muted ✓
+// px-[0.3rem] ✓
+// py-[0.2rem] ✓
+// font-mono ✓
+// text-sm ✓
+// font-semibold ✓
 .inlineCode {
     $padding-block: 0.2rem;
     $padding-inline: 0.3rem;
@@ -110,18 +155,25 @@ $default-scroll-margin: 5rem; /* 80px */
     @include utils.text-sm;
 }
 
+// text-xl ✓
+// text-muted-foreground ✓
 .lead {
     color: hsl(var(--col-muted-foreground));
 
     @include utils.text-xl;
 }
 
+// text-lg ✓
+// font-semibold ✓
 .large {
     font-weight: var(--font-semibold);
 
     @include utils.text-lg;
 }
 
+// text-sm ✓
+// font-medium ✓
+// leading-none ✓
 .small {
     display: inline-block;
     font-weight: var(--font-medium);
@@ -131,6 +183,8 @@ $default-scroll-margin: 5rem; /* 80px */
     line-height: var(--leading-none);
 }
 
+// text-sm ✓
+// text-muted-foreground ✓
 .muted {
     color: hsl(var(--col-muted-foreground));
 

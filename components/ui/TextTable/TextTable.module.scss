@@ -1,7 +1,12 @@
+// w-full ✓
 .textTable {
     width: var(--w-full);
 }
 
+// m-0 ✓
+// border-t ✓
+// p-0 ✓
+// even:bg-muted ✓
 .tr {
     margin: var(--m-0);
     padding: var(--p-0);
