@@ -1,0 +1,22 @@
+@mixin sr-only {
+    position: absolute;
+    width: var(--w-px);
+    height: var(--h-px);
+    margin: calc(var(--m-px) * -1);
+    padding: var(--p-0);
+    border-width: var(--border-0);
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+@mixin not-sr-only {
+    position: static;
+    width: var(--w-auto);
+    height: var(--h-auto);
+    margin: var(--m-0);
+    padding: var(--p-0);
+    white-space: normal;
+    clip: auto;
+    overflow: visible;
+}
