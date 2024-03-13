@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import * as DialogPrimitive from '@radix-ui/react-dialog'
+import type { Variants } from 'framer-motion'
 
 import { XMarkIcon } from '@heroicons/react/16/solid'
 
@@ -40,9 +40,36 @@ DialogPortal.displayName = 'DialogPortal'
 export const DialogClose: DialogCloseCmp = DIALOG_ELEMENTS.Close
 DialogClose.displayName = 'DialogClose'
 
-export const DialogOverlay: DialogOverlayCmp = renderRefElement(
-    DIALOG_ELEMENTS.Overlay,
-    styles.overlay,
+export const DialogOverlay: DialogOverlayCmp = React.forwardRef(
+    (props, ref) => {
+        const { className, ...restProps } = props
+
+        const DialogOverlay = DIALOG_ELEMENTS.Overlay
+
+        const overlayVariants: Variants = {
+            initial: {
+                opacity: 0,
+            },
+            target: {
+                opacity: 1,
+            },
+        }
+
+        return (
+            <DialogOverlay
+                ref={ref}
+                className={cn(styles.overlay, className)}
+                variants={overlayVariants}
+                initial={'initial'}
+                animate={'target'}
+                transition={{
+                    ease: 'linear',
+                    duration: 0.15,
+                }}
+                {...restProps}
+            />
+        )
+    },
 )
 DialogOverlay.displayName = 'DialogOverlay'
 
@@ -50,20 +77,43 @@ export const DialogContent: DialogContentCmp = React.forwardRef(
     (props, ref) => {
         const { children, className, ...restProps } = props
 
+        const DialogContent = DIALOG_ELEMENTS.Content
+
+        const contentVariants: Variants = {
+            initial: {
+                opacity: 0,
+                scale: 0.95,
+                x: '-50%',
+                y: '-48%',
+            },
+            target: {
+                opacity: 1,
+                scale: 1,
+                y: '-55%',
+            },
+        }
+
         return (
             <DialogPortal>
                 <DialogOverlay />
-                <DialogPrimitive.Content
+                <DialogContent
                     ref={ref}
                     className={cn(styles.content, className)}
+                    variants={contentVariants}
+                    initial={'initial'}
+                    animate={'target'}
+                    transition={{
+                        ease: 'linear',
+                        duration: 0.05,
+                    }}
                     {...restProps}
                 >
                     {children}
-                    <DialogPrimitive.Close className={styles.close}>
+                    <DialogClose className={styles.close}>
                         <XMarkIcon className={styles.closeIcon} />
                         <span className={styles.closeSr}>Close</span>
-                    </DialogPrimitive.Close>
-                </DialogPrimitive.Content>
+                    </DialogClose>
+                </DialogContent>
             </DialogPortal>
         )
     },

@@ -1,5 +1,7 @@
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 
+import { motion } from 'framer-motion'
+
 import type {
     CmpWithReadonlyProps,
     RefCmpWithReadonlyProps,
@@ -10,8 +12,8 @@ export const DIALOG_ELEMENTS = {
     Trigger: DialogPrimitive.Trigger,
     Portal: DialogPrimitive.Portal,
     Close: DialogPrimitive.Close,
-    Overlay: DialogPrimitive.Overlay,
-    Content: DialogPrimitive.Content,
+    Overlay: motion(DialogPrimitive.Overlay),
+    Content: motion(DialogPrimitive.Content),
     Header: 'div',
     Footer: 'div',
     Title: DialogPrimitive.Title,
