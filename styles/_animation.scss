@@ -1,0 +1,19 @@
+@keyframes accordion-down {
+    from {
+        height: var(--h-0);
+    }
+
+    to {
+        height: var(--radix-accordion-content-height);
+    }
+}
+
+@keyframes accordion-up {
+    from {
+        height: var(--radix-accordion-content-height);
+    }
+
+    to {
+        height: var(--h-0);
+    }
+}
