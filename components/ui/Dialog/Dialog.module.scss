@@ -62,7 +62,7 @@
     z-index: var(--z-modal);
 
     @include sm {
-        border-radius: var(--rounded-md);
+        border-radius: var(--rounded-3xl);
     }
 }
 
@@ -71,13 +71,13 @@
 // top-4 ✓
 // rounded-sm ~
 // opacity-70 ✓
-// ring-offset-background ×
+// ring-offset-background ✓
 // transition-opacity ✓
 // hover:opacity-100 ✓
 // focus:outline-none
-// focus:ring-2 ×
-// focus:ring-ring ×
-// focus:ring-offset-2 ×
+// focus:ring-2 ✓
+// focus:ring-ring ✓
+// focus:ring-offset-2 ✓
 // disabled:pointer-events-none ✓
 // data-[state=open]:bg-accent ✓
 // data-[state=open]:text-muted-foreground ✓
@@ -88,14 +88,25 @@
     inset-block-start: $offset;
     inset-inline-end: $offset;
     padding: var(--p-0);
-    border-radius: var(--rounded-xs);
+    border-radius: var(--rounded-xl);
     cursor: pointer;
     opacity: 0.7;
 
+    @include utils.ring-offset-background;
     @include utils.transition-opacity;
 
     &:hover {
         opacity: 1;
+    }
+
+    &:focus {
+        outline: none;
+
+        @include utils.compose-ring {
+            @include utils.ring-2;
+            @include utils.ring-offset-2;
+            @include utils.ring-ring;
+        }
     }
 
     &:disabled {

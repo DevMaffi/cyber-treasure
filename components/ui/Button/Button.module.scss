@@ -8,9 +8,9 @@
 // text-sm ✓
 // font-medium ✓
 // transition-colors ✓
-// focus-visible:outline-none ×
-// focus-visible:ring-1 ×
-// focus-visible:ring-ring ×
+// focus-visible:outline-none ✓
+// focus-visible:ring-1 ✓
+// focus-visible:ring-ring ✓
 // disabled:pointer-events-none ✓
 // disabled:opacity-50 ✓
 .btn {
@@ -25,6 +25,16 @@
 
     @include utils.text-sm;
     @include utils.transition-colors;
+
+    &:focus-visible {
+        outline: none;
+
+        @include utils.compose-ring {
+            @include utils.ring-2;
+            @include utils.ring-offset-2;
+            @include utils.ring-ring;
+        }
+    }
 
     &:disabled {
         pointer-events: none;
