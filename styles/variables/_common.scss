@@ -33,6 +33,12 @@
     --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
 
     /* Animation */
+    --animation-none: none;
+    --animation-spin: spin 1s linear infinite;
+    --animation-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    --animation-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    --animation-bounce: bounce 1s infinite;
+
     --accordion-down: accordion-down 0.2s ease-out;
     --accordion-up: accordion-up 0.2s ease-out;
 }
