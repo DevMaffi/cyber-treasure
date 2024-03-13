@@ -21,7 +21,7 @@ export default function RootLayout(props: RootLayoutProps) {
     const { children } = props
 
     return (
-        <html lang={'en'}>
+        <html lang={'en'} suppressHydrationWarning>
             <body className={cn(inter.className, 'dark')}>{children}</body>
         </html>
     )

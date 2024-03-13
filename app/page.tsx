@@ -26,7 +26,7 @@ export default function Home() {
                             <DialogTitle>Edit profile</DialogTitle>
                             <DialogDescription>
                                 Make changes to your profile here. Click save
-                                when you're done.
+                                when you&apos;re done.
                             </DialogDescription>
                         </DialogHeader>
                         <DialogFooter>
