@@ -1,0 +1,83 @@
+@mixin compose-ring {
+    --ring-offset-width: 0px;
+    --ring-offset: 0 0 0 var(--ring-offset-width)
+        var(--ring-offset-color, hsl(var(--col-background)));
+
+    @content;
+
+    box-shadow: var(--ring-offset), var(--ring);
+}
+
+/* Ring width */
+@mixin ring-0 {
+    --ring: 0 0 0 calc(0px + var(--ring-offset-width)) var(--ring-color);
+}
+
+@mixin ring-1 {
+    --ring: 0 0 0 calc(1px + var(--ring-offset-width)) var(--ring-color);
+}
+
+@mixin ring-2 {
+    --ring: 0 0 0 calc(2px + var(--ring-offset-width)) var(--ring-color);
+}
+
+@mixin ring {
+    --ring: 0 0 0 calc(3px + var(--ring-offset-width)) var(--ring-color);
+}
+
+@mixin ring-4 {
+    --ring: 0 0 0 calc(4px + var(--ring-offset-width)) var(--ring-color);
+}
+
+@mixin ring-8 {
+    --ring: 0 0 0 calc(8px + var(--ring-offset-width)) var(--ring-color);
+}
+
+/* Ring offset width */
+@mixin ring-offset-0 {
+    --ring-offset-width: 0px;
+
+    --ring-offset: 0 0 0 var(--ring-offset-width)
+        var(--ring-offset-color, hsl(var(--col-background)));
+}
+
+@mixin ring-offset-1 {
+    --ring-offset-width: 1px;
+
+    --ring-offset: 0 0 0 var(--ring-offset-width)
+        var(--ring-offset-color, hsl(var(--col-background)));
+}
+
+@mixin ring-offset-2 {
+    --ring-offset-width: 2px;
+
+    --ring-offset: 0 0 0 var(--ring-offset-width)
+        var(--ring-offset-color, hsl(var(--col-background)));
+}
+
+@mixin ring-offset-4 {
+    --ring-offset-width: 4px;
+
+    --ring-offset: 0 0 0 var(--ring-offset-width)
+        var(--ring-offset-color, hsl(var(--col-background)));
+}
+
+@mixin ring-offset-8 {
+    --ring-offset-width: 8px;
+
+    --ring-offset: 0 0 0 var(--ring-offset-width)
+        var(--ring-offset-color, hsl(var(--col-background)));
+}
+
+/* Ring color */
+@mixin ring-ring {
+    --ring-color: hsl(var(--col-ring));
+}
+
+/* Ring offset color */
+@mixin ring-offset-background {
+    --ring-offset-color: hsl(var(--col-background));
+
+    --ring-offset-background: 0 0 0 var(--ring-offset-width)
+        var(--ring-offset-color);
+}
