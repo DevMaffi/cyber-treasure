@@ -2,7 +2,7 @@
 @use 'styles/utils/media' as *;
 
 $page-offset: var(--m-10);
-$page-md-offset: 5rem; /* 80px */
+$page-lg-offset: 5rem; /* 80px */
 
 .main {
     min-height: var(--h-screen);
@@ -14,7 +14,7 @@ $page-md-offset: 5rem; /* 80px */
     @include utils.container(var(--container-md));
 
     @include lg {
-        margin-block: $page-md-offset;
+        margin-block: $page-lg-offset;
     }
 }
 
