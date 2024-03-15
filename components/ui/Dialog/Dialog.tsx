@@ -30,6 +30,7 @@ import { DIALOG_ELEMENTS } from '@/components/ui/Dialog/variants'
 import styles from './Dialog.module.scss'
 
 const Dialog: DialogCmp = DIALOG_ELEMENTS.Dialog
+Dialog.displayName = 'Dialog'
 
 export const DialogTrigger: DialogTriggerCmp = DIALOG_ELEMENTS.Trigger
 DialogTrigger.displayName = 'DialogTrigger'
@@ -142,9 +143,6 @@ export const DialogDescription: DialogDescriptionCmp = renderRefElement(
     DIALOG_ELEMENTS.Description,
     styles.description,
 )
-
 DialogDescription.displayName = 'DialogDescription'
-
-Dialog.displayName = 'Dialog'
 
 export default Dialog
