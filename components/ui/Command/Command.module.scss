@@ -1,0 +1,236 @@
+@use 'styles/utils';
+
+// flex ✓
+// h-full ✓
+// w-full ✓
+// flex-col ✓
+// overflow-hidden ✓
+// rounded-md ~
+// bg-popover ✓
+// text-popover-foreground ✓
+.command {
+    display: flex;
+    flex-direction: column;
+    width: var(--w-full);
+    height: var(--h-full);
+    background-color: hsl(var(--col-popover));
+    border-radius: var(--rounded-2xl);
+    color: hsl(var(--col-popover-foreground));
+    overflow: hidden;
+}
+
+// overflow-hidden ✓
+// p-0 ✓
+.dialogContent {
+    padding: var(--p-0);
+    overflow: hidden;
+}
+
+// [&_[cmdk-group-heading]]:px-2 ✓
+// [&_[cmdk-group-heading]]:font-medium ✓
+// [&_[cmdk-group-heading]]:text-muted-foreground ✓
+// [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 ✓
+// [&_[cmdk-group]]:px-2 ✓
+// [&_[cmdk-input-wrapper]_svg]:h-5 ✓
+// [&_[cmdk-input-wrapper]_svg]:w-5 ✓
+// [&_[cmdk-input]]:h-12 ✓
+// [&_[cmdk-item]]:px-2 ✓
+// [&_[cmdk-item]]:py-3 ✓
+// [&_[cmdk-item]_svg]:h-5 ✓
+// [&_[cmdk-item]_svg]:w-5 ✓
+.dialogCommand {
+    & [cmdk-group] {
+        padding-inline: var(--p-2);
+    }
+
+    & [cmdk-group]:not([hidden]) ~ [cmdk-group] {
+        padding-block-start: var(--p-0);
+    }
+
+    & [cmdk-group-heading] {
+        padding-inline: var(--p-2);
+        font-weight: var(--font-medium);
+        color: hsl(var(--col-muted-foreground));
+    }
+
+    & [cmdk-input-wrapper] svg {
+        aspect-ratio: 1;
+        width: var(--w-5);
+    }
+
+    & [cmdk-input] {
+        $height: 3rem; /* 48px */
+
+        height: $height;
+    }
+
+    & [cmdk-item] {
+        padding-block: var(--p-3);
+        padding-inline: var(--p-2);
+    }
+
+    & [cmdk-item] svg {
+        aspect-ratio: 1;
+        width: var(--w-5);
+    }
+}
+
+// flex ✓
+// items-center ✓
+// border-b ✓
+// px-3 ✓
+.inputContainer {
+    display: flex;
+    align-items: center;
+    padding-inline: var(--p-3);
+    border-bottom-width: var(--border);
+}
+
+// flex ✓
+// h-10 ✓
+// w-full ✓
+// rounded-md ~
+// bg-transparent ✓
+// py-3 ✓
+// text-sm ✓
+// outline-none ✓
+// placeholder:text-muted-foreground ✓
+// disabled:cursor-not-allowed ✓
+// disabled:opacity-50 ✓
+.input {
+    display: flex;
+    width: var(--w-full);
+    height: var(--h-10);
+    padding-block: var(--p-3);
+    background-color: transparent;
+    border-radius: var(--rounded-2xl);
+    color: inherit;
+    outline: none;
+
+    @include utils.text-sm;
+
+    &::placeholder {
+        color: hsl(var(--col-muted-foreground));
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
+
+// mr-2 ✓
+// h-4 ✓
+// w-4 ✓
+// shrink-0 ✓
+// opacity-50 ✓
+.inputIcon {
+    flex-shrink: 0;
+    aspect-ratio: 1;
+    width: var(--w-4);
+    margin-inline-end: var(--m-2);
+    opacity: 0.5;
+}
+
+// max-h-[300px] ✓
+// overflow-y-auto ✓
+// overflow-x-hidden ✓
+.list {
+    $max-height: 300px;
+
+    max-height: $max-height;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+// py-6 ✓
+// text-center ✓
+// text-sm ✓
+.empty {
+    padding-block: var(--p-6);
+    text-align: center;
+
+    @include utils.text-sm;
+}
+
+// overflow-hidden ✓
+// p-1 ✓
+// text-foreground ✓
+// [&_[cmdk-group-heading]]:px-2 ✓
+// [&_[cmdk-group-heading]]:py-1.5 ✓
+// [&_[cmdk-group-heading]]:text-xs ✓
+// [&_[cmdk-group-heading]]:font-medium ✓
+// [&_[cmdk-group-heading]]:text-muted-foreground ✓
+.group {
+    padding: var(--p-1);
+    color: hsl(var(--col-foreground));
+    overflow: hidden;
+
+    & [cmdk-group-heading] {
+        padding-block: var(--p-1-5);
+        padding-inline: var(--p-2);
+        font-weight: var(--font-medium);
+        color: hsl(var(--col-muted-foreground));
+
+        @include utils.text-xs;
+    }
+}
+
+// -mx-1 ✓
+// h-px ✓
+// bg-border ✓
+.separator {
+    height: var(--h-px);
+    margin-inline: calc(var(--m-1) * -1);
+    background-color: hsl(var(--col-border));
+}
+
+// relative ✓
+// flex ✓
+// cursor-default ✓
+// select-none ✓
+// items-center ✓
+// rounded-sm ~
+// px-2 ✓
+// py-1.5 ✓
+// text-sm ✓
+// outline-none ✓
+// aria-selected:bg-accent ✓
+// aria-selected:text-accent-foreground ✓
+// data-[disabled]:pointer-events-none ✓
+// data-[disabled]:opacity-50 ✓
+.item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-block: var(--p-1-5);
+    padding-inline: var(--p-2);
+    border-radius: var(--rounded-xl);
+    outline: none;
+    user-select: none;
+    cursor: default;
+
+    @include utils.text-sm;
+
+    &[aria-selected='true'] {
+        background-color: hsl(var(--col-accent));
+        color: hsl(var(--col-accent-foreground));
+    }
+
+    &[data-disabled] {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+// ml-auto ✓
+// text-xs ✓
+// tracking-widest ✓
+// text-muted-foreground ✓
+.shortcut {
+    margin-inline-start: var(--m-auto);
+    letter-spacing: var(--tracking-widest);
+    color: hsl(var(--col-muted-foreground));
+
+    @include utils.text-xs;
+}
