@@ -90,7 +90,7 @@ export const DialogContent: DialogContentCmp = React.forwardRef(
             target: {
                 opacity: 1,
                 scale: 1,
-                y: '-55%',
+                y: '-50%',
             },
         }
 
