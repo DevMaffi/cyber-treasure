@@ -141,8 +141,8 @@ $default-flow-spacer: 1.5em;
 // text-sm ✓
 // font-semibold ✓
 .inlineCode {
-    $padding-block: 0.2rem;
-    $padding-inline: 0.3rem;
+    $padding-block: 0.2rem; /* 3.2px */
+    $padding-inline: 0.3rem; /* 4.8px */
 
     position: relative;
     display: inline-block;
