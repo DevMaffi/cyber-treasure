@@ -14,6 +14,9 @@
     inset: var(--inset-0);
     background-color: hsl(var(--col-black) / 0.8);
     z-index: var(--z-modal);
+
+    /* animation initial */
+    opacity: 0;
 }
 
 // fixed ✓
@@ -57,9 +60,12 @@
     border-width: var(--border);
     box-shadow: var(--shadow-lg);
     user-select: none;
-    transform: translate(-50%, -50%);
     transition-duration: $duration;
     z-index: var(--z-modal);
+
+    /* animation initial */
+    scale: 0.95;
+    translate: -50% -45%;
 
     @include sm {
         border-radius: var(--rounded-3xl);

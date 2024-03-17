@@ -4,8 +4,10 @@
 $default-scroll-margin: 5rem; /* 80px */
 $default-flow-spacer: 1.5em;
 
-.typography > * + * {
-    margin-block-start: var(--flow-spacer, $default-flow-spacer);
+.typography {
+    & > * + * {
+        margin-block-start: var(--flow-spacer, $default-flow-spacer);
+    }
 }
 
 // scroll-m-20 ✓
@@ -185,6 +187,7 @@ $default-flow-spacer: 1.5em;
     font-family: var(--font-mono);
     font-size: $font-size;
     font-weight: var(--font-medium);
+    letter-spacing: var(--tracking-widest);
     color: hsl(var(--col-muted-foreground));
     pointer-events: none;
     user-select: none;

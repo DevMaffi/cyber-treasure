@@ -1,4 +1,4 @@
-import { TypographyKbd, TypographyMuted } from '@/components/ui/Typography'
+import { TypographyKbd } from '@/components/ui/Typography'
 
 import { CommandCenter } from '@/features/commandCenter'
 
@@ -8,12 +8,8 @@ export default function Home() {
     return (
         <main className={styles.main}>
             <div className={styles.container}>
-                <TypographyMuted>
-                    Press&nbsp;
-                    <TypographyKbd>
-                        <span>⌘</span>K
-                    </TypographyKbd>
-                </TypographyMuted>
+                <TypographyKbd>CTRL</TypographyKbd>&nbsp;
+                <TypographyKbd>K</TypographyKbd>
                 <CommandCenter />
             </div>
         </main>
