@@ -221,7 +221,7 @@
         color: hsl(var(--col-accent-foreground));
     }
 
-    &[data-disabled] {
+    &[data-disabled='true'] {
         pointer-events: none;
         opacity: 0.5;
     }
