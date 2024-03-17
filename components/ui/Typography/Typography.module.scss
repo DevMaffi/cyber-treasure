@@ -4,7 +4,7 @@
 $default-scroll-margin: 5rem; /* 80px */
 $default-flow-spacer: 1.5em;
 
-.flow > * + * {
+.typography > * + * {
     margin-block-start: var(--flow-spacer, $default-flow-spacer);
 }
 

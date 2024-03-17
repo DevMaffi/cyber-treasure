@@ -11,7 +11,7 @@ import { TYPOGRAPHY_ELEMENTS } from '@/components/ui/Typography/variants'
 
 import styles from './Typography.module.scss'
 
-const Typography = renderRefElement('div', styles.flow) as TypographyCmp
+const Typography = renderRefElement('div', styles.typography) as TypographyCmp
 
 const typographyStyles: TypographyStylesRecord = {
     H1: styles.heading1,
