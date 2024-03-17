@@ -11,6 +11,7 @@ export const TypographyTd = Typography.Td
 export const TypographyList = Typography.List
 export const TypographyListItem = Typography.ListItem
 export const TypographyInlineCode = Typography.InlineCode
+export const TypographyKbd = Typography.Kbd
 export const TypographyLead = Typography.Lead
 export const TypographyLarge = Typography.Large
 export const TypographySmall = Typography.Small

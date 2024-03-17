@@ -25,6 +25,7 @@ const typographyStyles: TypographyStylesRecord = {
     List: styles.list,
     ListItem: styles.listItem,
     InlineCode: styles.inlineCode,
+    Kbd: styles.kbd,
     Lead: styles.lead,
     Large: styles.large,
     Small: styles.small,

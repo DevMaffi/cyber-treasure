@@ -12,6 +12,7 @@ export const TYPOGRAPHY_ELEMENTS = {
     List: 'ul',
     ListItem: 'li',
     InlineCode: 'code',
+    Kbd: 'kbd',
     Lead: 'p',
     Large: 'div',
     Small: 'small',
