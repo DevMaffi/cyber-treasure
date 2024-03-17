@@ -3,6 +3,9 @@
 @forward 'variables';
 @forward 'animation';
 
+@forward 'scrollbar';
+@forward 'selection';
+
 *,
 ::before,
 ::after {

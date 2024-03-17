@@ -1,0 +1,18 @@
+::-webkit-scrollbar {
+    width: var(--w-1-5);
+}
+
+::-webkit-scrollbar-track {
+    margin-block: var(--m-0-5);
+    background-color: transparent;
+    border-radius: var(--rounded-full);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--col-accent-foreground) / 0.5);
+    border-radius: var(--rounded-full);
+
+    &:hover {
+        background-color: hsl(var(--col-accent-foreground) / 0.7);
+    }
+}
