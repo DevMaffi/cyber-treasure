@@ -3,7 +3,11 @@ import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
+import { Providers } from '@/components/providers'
+
 import { cn } from '@/lib/utils'
+
+import { Header } from '@/widgets/navigation'
 
 import './globals.scss'
 
@@ -22,7 +26,12 @@ export default function RootLayout(props: RootLayoutProps) {
 
     return (
         <html lang={'en'} suppressHydrationWarning>
-            <body className={cn(inter.className, 'dark')}>{children}</body>
+            <body className={cn(inter.className)}>
+                <Providers>
+                    <Header />
+                    {children}
+                </Providers>
+            </body>
         </html>
     )
 }

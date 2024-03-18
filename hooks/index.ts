@@ -1,0 +1,1 @@
+export { useRootShortcuts } from './useRootShortcuts'

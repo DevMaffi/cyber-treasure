@@ -1,0 +1,19 @@
+.header {
+    position: sticky;
+    inset-block-start: 0;
+    inset-inline: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    padding-block: var(--p-2-5);
+    padding-inline: var(--p-5);
+    background-color: hsl(var(--col-background));
+    border-bottom-width: var(--border);
+}
+
+.logo {
+    aspect-ratio: 1;
+    width: var(--w-6);
+    color: hsl(var(--col-foreground));
+}

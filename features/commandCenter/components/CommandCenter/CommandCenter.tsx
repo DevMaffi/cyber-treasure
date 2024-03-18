@@ -28,7 +28,7 @@ import { useCommandCenter } from '@/features/commandCenter/hooks'
 import styles from './CommandCenter.module.scss'
 
 export default function CommandCenter() {
-    const { open, setOpen } = useCommandCenter()
+    const { open, setOpen, toggleTheme } = useCommandCenter()
 
     return (
         <CommandDialog open={open} onOpenChange={setOpen}>
@@ -66,12 +66,12 @@ export default function CommandCenter() {
                             <TypographyKbd>P</TypographyKbd>
                         </CommandShortcut>
                     </CommandItem>
-                    <CommandItem>
+                    <CommandItem onSelect={toggleTheme}>
                         <PaintBrushIcon className={styles.cmdIcon} />
                         <span>Theme</span>
                         <CommandShortcut>
                             <TypographyKbd>CTRL</TypographyKbd>&nbsp;
-                            <TypographyKbd>T</TypographyKbd>
+                            <TypographyKbd>[</TypographyKbd>
                         </CommandShortcut>
                     </CommandItem>
                     <CommandItem>

@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
 
+import { useThemeToggle } from '@/features/theme'
+
 export function useCommandCenter() {
     const [open, setOpen] = useState(false)
+
+    const [_, toggleTheme] = useThemeToggle()
 
     useEffect(() => {
         const down = (e: KeyboardEvent) => {
@@ -21,5 +25,6 @@ export function useCommandCenter() {
     return {
         open,
         setOpen,
+        toggleTheme,
     }
 }
