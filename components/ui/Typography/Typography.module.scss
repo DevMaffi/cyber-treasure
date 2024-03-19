@@ -175,24 +175,7 @@ $default-scroll-margin: 5rem; /* 80px */
 // text-muted-foreground ✓
 // opacity-100 ✓
 .kbd {
-    $font-size: 0.625rem; /* 10px */
-
-    display: inline-flex;
-    align-items: center;
-    gap: var(--gap-1);
-    height: var(--h-5);
-    padding-inline: var(--p-1-5);
-    background-color: hsl(var(--col-muted));
-    border-width: var(--border);
-    border-radius: var(--rounded-sm);
-    font-family: var(--font-mono);
-    font-size: $font-size;
-    font-weight: var(--font-medium);
-    letter-spacing: var(--tracking-widest);
-    color: hsl(var(--col-muted-foreground));
-    pointer-events: none;
-    user-select: none;
-    opacity: 1;
+    @include utils.text-kbd;
 }
 
 // text-xs ✓

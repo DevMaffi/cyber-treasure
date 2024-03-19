@@ -42,3 +42,39 @@
     font-size: 3rem; /* 48px */
     line-height: 1; /* 48px */
 }
+
+// pointer-events-none ✓
+// inline-flex ✓
+// h-5 ✓
+// select-none ✓
+// items-center ✓
+// gap-1 ✓
+// rounded ~
+// border ✓
+// bg-muted ✓
+// px-1.5 ✓
+// font-mono ✓
+// text-[10px] ✓
+// font-medium ✓
+// text-muted-foreground ✓
+// opacity-100 ✓
+@mixin text-kbd {
+    $font-size: 0.625rem; /* 10px */
+
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-1);
+    height: var(--h-5);
+    padding-inline: var(--p-1-5);
+    background-color: hsl(var(--col-muted));
+    border-width: var(--border);
+    border-radius: var(--rounded-sm);
+    font-family: var(--font-mono);
+    font-size: $font-size;
+    font-weight: var(--font-medium);
+    letter-spacing: var(--tracking-widest);
+    color: hsl(var(--col-muted-foreground));
+    pointer-events: none;
+    user-select: none;
+    opacity: 1;
+}

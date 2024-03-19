@@ -11,8 +11,6 @@ import {
     UserIcon,
 } from '@heroicons/react/24/outline'
 
-import { TypographyKbd } from '@/components/ui/Typography'
-
 import {
     CommandDialog,
     CommandEmpty,
@@ -21,6 +19,7 @@ import {
     CommandItem,
     CommandList,
     CommandShortcut,
+    CommandShortcutKbd,
 } from '@/components/ui/Command'
 
 import { useCommandCenter } from '@/features/commandCenter/hooks'
@@ -62,24 +61,24 @@ export default function CommandCenter() {
                         <UserIcon className={styles.cmdIcon} />
                         <span>Profile</span>
                         <CommandShortcut>
-                            <TypographyKbd>CTRL</TypographyKbd>&nbsp;
-                            <TypographyKbd>P</TypographyKbd>
+                            <CommandShortcutKbd>CTRL</CommandShortcutKbd>&nbsp;
+                            <CommandShortcutKbd>P</CommandShortcutKbd>
                         </CommandShortcut>
                     </CommandItem>
                     <CommandItem onSelect={toggleTheme}>
                         <PaintBrushIcon className={styles.cmdIcon} />
                         <span>Theme</span>
                         <CommandShortcut>
-                            <TypographyKbd>CTRL</TypographyKbd>&nbsp;
-                            <TypographyKbd>[</TypographyKbd>
+                            <CommandShortcutKbd>CTRL</CommandShortcutKbd>&nbsp;
+                            <CommandShortcutKbd>[</CommandShortcutKbd>
                         </CommandShortcut>
                     </CommandItem>
                     <CommandItem>
                         <Cog6ToothIcon className={styles.cmdIcon} />
                         <span>Settings</span>
                         <CommandShortcut>
-                            <TypographyKbd>CTRL</TypographyKbd>&nbsp;
-                            <TypographyKbd>S</TypographyKbd>
+                            <CommandShortcutKbd>CTRL</CommandShortcutKbd>&nbsp;
+                            <CommandShortcutKbd>S</CommandShortcutKbd>
                         </CommandShortcut>
                     </CommandItem>
                 </CommandGroup>

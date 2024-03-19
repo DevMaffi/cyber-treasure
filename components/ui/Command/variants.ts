@@ -21,6 +21,7 @@ export const COMMAND_ELEMENTS = {
     Separator: CommandPrimitive.Separator,
     Item: CommandPrimitive.Item,
     Shortcut: 'span',
+    ShortcutKbd: 'span',
 } as const
 
 export type CommandCmp = RefCmpWithReadonlyProps<
@@ -57,4 +58,8 @@ export type CommandItemCmp = RefCmpWithReadonlyProps<
 
 export type CommandShortcutCmp = CmpWithReadonlyProps<
     typeof COMMAND_ELEMENTS.Shortcut
+>
+
+export type CommandShortcutKbdCmp = CmpWithReadonlyProps<
+    typeof COMMAND_ELEMENTS.ShortcutKbd
 >

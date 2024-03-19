@@ -23,6 +23,7 @@ import type {
     CommandListCmp,
     CommandSeparatorCmp,
     CommandShortcutCmp,
+    CommandShortcutKbdCmp,
 } from '@/components/ui/Command/variants'
 import { COMMAND_ELEMENTS } from '@/components/ui/Command/variants'
 
@@ -102,5 +103,11 @@ export const CommandShortcut: CommandShortcutCmp = renderElement(
     styles.shortcut,
 )
 CommandShortcut.displayName = 'CommandShortcut'
+
+export const CommandShortcutKbd: CommandShortcutKbdCmp = renderElement(
+    COMMAND_ELEMENTS.ShortcutKbd,
+    styles.shortcutKbd,
+)
+CommandShortcutKbd.displayName = 'CommandShortcutKbd'
 
 export default Command
