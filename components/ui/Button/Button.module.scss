@@ -9,7 +9,7 @@
 // font-medium ✓
 // transition-colors ✓
 // focus-visible:outline-none ✓
-// focus-visible:ring-1 ✓
+// focus-visible:ring-1 ~
 // focus-visible:ring-ring ✓
 // disabled:pointer-events-none ✓
 // disabled:opacity-50 ✓
@@ -17,9 +17,11 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
     border-radius: var(--rounded-2xl);
     font-weight: var(--font-medium);
     white-space: nowrap;
+    color: inherit;
     user-select: none;
     cursor: pointer;
 
@@ -81,7 +83,6 @@
     border-width: var(--border);
     border-color: hsl(var(--col-input));
     box-shadow: var(--shadow-sm);
-    color: inherit;
 
     &:hover {
         background-color: hsl(var(--col-accent));
@@ -106,9 +107,6 @@
 // hover:bg-accent ✓
 // hover:text-accent-foreground ✓
 .btnGhostVariant {
-    background-color: transparent;
-    color: inherit;
-
     &:hover {
         background-color: hsl(var(--col-accent));
         color: hsl(var(--col-accent-foreground));
@@ -119,7 +117,6 @@
 // underline-offset-4 ✓
 // hover:underline ✓
 .btnLinkVariant {
-    background-color: transparent;
     color: hsl(var(--col-primary));
     text-underline-offset: var(--underline-offset-4);
 

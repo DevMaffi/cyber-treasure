@@ -27,7 +27,7 @@
 // w-full ✓
 // max-w-lg ✓
 // translate-x-[-50%] ✓
-// translate-y-[-50%] ✓
+// translate-y-[-50%] ~
 // gap-4 ✓
 // border ✓
 // bg-background ✓
@@ -63,13 +63,13 @@
     transition-duration: $duration;
     z-index: var(--z-modal);
 
-    /* animation initial */
-    scale: 0.95;
-    translate: -50% -45%;
-
     @include sm {
         border-radius: var(--rounded-3xl);
     }
+
+    /* animation initial */
+    scale: 0.95;
+    translate: -50% -45%;
 }
 
 // absolute ✓
@@ -80,7 +80,7 @@
 // ring-offset-background ✓
 // transition-opacity ✓
 // hover:opacity-100 ✓
-// focus:outline-none
+// focus:outline-none ✓
 // focus:ring-2 ✓
 // focus:ring-ring ✓
 // focus:ring-offset-2 ✓
