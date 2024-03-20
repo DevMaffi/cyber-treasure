@@ -12,7 +12,10 @@ import styles from './Header.module.scss'
 
 const ThemeToggleBtn = dynamic(
     () => import('@/features/theme/components/ThemeToggleBtn/ThemeToggleBtn'),
-    { ssr: false },
+    {
+        loading: () => <p>Loading...</p>,
+        ssr: false,
+    },
 )
 
 export default function Header() {
