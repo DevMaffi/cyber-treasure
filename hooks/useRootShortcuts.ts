@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useThemeToggle } from '@/features/theme'
 
 export function useRootShortcuts() {
-    const [theme, toggleTheme] = useThemeToggle()
+    const { theme, toggleTheme } = useThemeToggle()
 
     useEffect(() => {
         const down = (e: KeyboardEvent) => {

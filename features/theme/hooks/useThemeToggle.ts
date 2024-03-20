@@ -16,5 +16,8 @@ export function useThemeToggle() {
         setTheme(THEME_MODE.Dark)
     }
 
-    return [theme, toggleTheme] as const
+    return {
+        theme,
+        toggleTheme,
+    }
 }

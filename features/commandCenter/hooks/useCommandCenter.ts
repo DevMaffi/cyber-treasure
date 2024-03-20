@@ -5,7 +5,7 @@ import { useThemeToggle } from '@/features/theme'
 export function useCommandCenter() {
     const [open, setOpen] = useState(false)
 
-    const [_, toggleTheme] = useThemeToggle()
+    const { toggleTheme } = useThemeToggle()
 
     useEffect(() => {
         const down = (e: KeyboardEvent) => {
