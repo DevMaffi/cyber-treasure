@@ -4,6 +4,8 @@ import React from 'react'
 
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu'
 
+import type { Variants } from 'framer-motion'
+
 import { CheckIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 
 import { cn } from '@/lib/utils'
@@ -89,11 +91,29 @@ export const DropdownMenuContent: DropdownMenuContentCmp = React.forwardRef(
 
         const DropdownMenuContent = DROPDOWN_MENU_ELEMENTS.Content
 
+        const contentVariants: Variants = {
+            initial: {
+                opacity: 0,
+                scale: 0.95,
+            },
+            target: {
+                opacity: 1,
+                scale: 1,
+            },
+        }
+
         return (
             <DropdownMenuPortal>
                 <DropdownMenuContent
                     ref={ref}
                     className={cn(styles.content, className)}
+                    variants={contentVariants}
+                    initial={'initial'}
+                    animate={'target'}
+                    transition={{
+                        ease: 'linear',
+                        duration: 0.1,
+                    }}
                     sideOffset={sideOffset}
                     {...restProps}
                 />

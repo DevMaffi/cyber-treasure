@@ -1,5 +1,7 @@
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu'
 
+import { motion } from 'framer-motion'
+
 import type {
     CmpWithReadonlyProps,
     RefCmpWithReadonlyProps,
@@ -13,8 +15,8 @@ export const DROPDOWN_MENU_ELEMENTS = {
     Sub: DropdownMenuPrimitive.Sub,
     RadioGroup: DropdownMenuPrimitive.RadioGroup,
     SubTrigger: DropdownMenuPrimitive.SubTrigger,
-    SubContent: DropdownMenuPrimitive.SubContent,
-    Content: DropdownMenuPrimitive.Content,
+    SubContent: motion(DropdownMenuPrimitive.SubContent),
+    Content: motion(DropdownMenuPrimitive.Content),
     Item: DropdownMenuPrimitive.Item,
     CheckboxItem: DropdownMenuPrimitive.CheckboxItem,
     RadioItem: DropdownMenuPrimitive.RadioItem,
