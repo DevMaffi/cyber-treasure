@@ -1,0 +1,8 @@
+// animate-pulse ✓
+// rounded-md ✓
+// bg-primary/10 ~
+.skeleton {
+    background-color: hsl(var(--col-muted) / 0.9);
+    border-radius: var(--rounded-2xl);
+    animation: var(--animation-pulse);
+}
