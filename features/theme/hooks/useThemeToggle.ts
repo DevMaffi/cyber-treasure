@@ -1,17 +1,19 @@
 import { useTheme } from 'next-themes'
 
+import { THEME_MODE } from '@/enums'
+
 export function useThemeToggle() {
     const { theme, setTheme } = useTheme()
 
     function toggleTheme() {
-        const isDarkMode = theme === 'dark'
+        const isDarkMode = theme === THEME_MODE.Dark
 
         if (isDarkMode) {
-            setTheme('light')
+            setTheme(THEME_MODE.Light)
             return
         }
 
-        setTheme('dark')
+        setTheme(THEME_MODE.Dark)
     }
 
     return [theme, toggleTheme] as const

@@ -5,6 +5,8 @@ import React from 'react'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
 import { ShortcutsProvider } from '@/components/providers/ShortcutsProvider'
 
+import { THEME_MODE } from '@/enums'
+
 type ProvidersProps = Readonly<{
     children: React.ReactNode
 }>
@@ -15,7 +17,7 @@ export default function Providers(props: ProvidersProps) {
     return (
         <ThemeProvider
             attribute={'class'}
-            defaultTheme={'system'}
+            defaultTheme={THEME_MODE.System}
             enableSystem
             disableTransitionOnChange
         >

@@ -1,4 +1,47 @@
-.themeIcon {
+@use 'styles/utils';
+
+// h-[1.2rem] ~
+// w-[1.2rem] ~
+// transition-all ✓
+.sunIcon,
+.moonIcon {
     aspect-ratio: 1;
     width: var(--w-5);
+
+    @include utils.transition-all;
+}
+
+// rotate-0 ✓
+// scale-100 ✓
+// dark:-rotate-90 ✓
+// dark:scale-0 ✓
+.sunIcon {
+    rotate: 0;
+    scale: 1;
+
+    :global(.dark) & {
+        rotate: -90;
+        scale: 0;
+    }
+}
+
+// absolute ✓
+// rotate-90 ✓
+// scale-0 ✓
+// dark:rotate-0 ✓
+// dark:scale-100 ✓
+.moonIcon {
+    position: absolute;
+    rotate: -90;
+    scale: 0;
+
+    :global(.dark) & {
+        rotate: 0;
+        scale: 1;
+    }
+}
+
+// sr-only ✓
+.themeSr {
+    @include utils.sr-only;
 }
