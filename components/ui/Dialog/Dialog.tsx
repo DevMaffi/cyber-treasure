@@ -48,6 +48,9 @@ export const DialogOverlay: DialogOverlayCmp = React.forwardRef(
         const DialogOverlay = DIALOG_ELEMENTS.Overlay
 
         const overlayVariants: Variants = {
+            initial: {
+                opacity: 0,
+            },
             target: {
                 opacity: 1,
             },
@@ -58,6 +61,7 @@ export const DialogOverlay: DialogOverlayCmp = React.forwardRef(
                 ref={ref}
                 className={cn(styles.overlay, className)}
                 variants={overlayVariants}
+                initial={'initial'}
                 animate={'target'}
                 transition={{
                     ease: 'linear',
@@ -77,6 +81,10 @@ export const DialogContent: DialogContentCmp = React.forwardRef(
         const DialogContent = DIALOG_ELEMENTS.Content
 
         const contentVariants: Variants = {
+            initial: {
+                scale: 0.95,
+                translate: '-50% -48%',
+            },
             target: {
                 scale: 1,
                 translate: '-50% -50%',
@@ -90,6 +98,7 @@ export const DialogContent: DialogContentCmp = React.forwardRef(
                     ref={ref}
                     className={cn(styles.content, className)}
                     variants={contentVariants}
+                    initial={'initial'}
                     animate={'target'}
                     transition={{
                         ease: 'linear',

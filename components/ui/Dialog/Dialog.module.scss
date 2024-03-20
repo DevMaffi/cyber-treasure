@@ -14,9 +14,6 @@
     inset: var(--inset-0);
     background-color: hsl(var(--col-black) / 0.8);
     z-index: var(--z-modal);
-
-    /* animation initial */
-    opacity: 0;
 }
 
 // fixed ✓
@@ -27,7 +24,7 @@
 // w-full ✓
 // max-w-lg ✓
 // translate-x-[-50%] ✓
-// translate-y-[-50%] ~
+// translate-y-[-50%] ✓
 // gap-4 ✓
 // border ✓
 // bg-background ✓
@@ -60,16 +57,13 @@
     border-width: var(--border);
     box-shadow: var(--shadow-lg);
     user-select: none;
+    translate: -50% -50%;
     transition-duration: $duration;
     z-index: var(--z-modal);
 
     @include sm {
         border-radius: var(--rounded-3xl);
     }
-
-    /* animation initial */
-    scale: 0.95;
-    translate: -50% -45%;
 }
 
 // absolute ✓
