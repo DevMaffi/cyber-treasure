@@ -49,7 +49,7 @@ export default function About() {
                                 and hidden classics, catering to every
                                 gamer&apos;s taste.
                             </TypographyListItem>
-                            <TypographyListItem className={styles.subFlow}>
+                            <TypographyListItem>
                                 Platform Agnostic: Find your perfect game,
                                 whether you prefer console classics, captivating
                                 PC titles, or mobile gaming on the go.
