@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 import { useThemeToggle } from '@/features/theme'
 
+import { useCommandCenterContext } from '@/features/commandCenter/context'
+
 export function useCommandCenter() {
-    const [open, setOpen] = useState(false)
+    const { open, setOpen } = useCommandCenterContext()
 
     const { toggleTheme } = useThemeToggle()
 
