@@ -65,7 +65,9 @@ function isInnerElementKey<T extends CmpElementsRecord>(
     elements: T,
     key: unknown,
 ): key is keyof T {
-    if (key !== null && typeof key === 'string') {
+    const isKeyString = key !== null && typeof key === 'string'
+
+    if (isKeyString) {
         return key in elements
     }
 
