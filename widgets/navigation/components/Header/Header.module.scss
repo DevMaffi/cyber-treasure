@@ -7,14 +7,21 @@
     align-items: center;
     height: var(--header-height);
     padding-block: var(--p-2-5);
-    padding-inline: var(--p-5);
-    background-color: hsl(var(--col-background));
+    padding-inline: var(--p-6);
+    background-color: hsl(var(--col-popover) / 0.5);
+    backdrop-filter: var(--backdrop-blur);
     border-bottom-width: var(--border);
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-10);
 }
 
 .logo {
     aspect-ratio: 1;
-    width: var(--w-6);
+    width: var(--w-7);
     color: hsl(var(--col-foreground));
 }
 

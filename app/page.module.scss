@@ -10,7 +10,3 @@ $min-content-height: calc(var(--h-screen) - var(--header-height));
     align-items: center;
     min-height: $min-content-height;
 }
-
-.shortcut {
-    user-select: none;
-}

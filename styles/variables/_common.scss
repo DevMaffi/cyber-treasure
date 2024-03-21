@@ -19,7 +19,7 @@
     --rounded-4xl: calc(1.5rem * var(--radius)); /* 24px */
     --rounded-full: 100vw;
 
-    /* Shadow */
+    /* Box shadow */
     --shadow-none: 0 0 #0000;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -31,6 +31,16 @@
         0 8px 10px -6px rgb(0 0 0 / 0.1);
     --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+    /* Backdrop blur */
+    --backdrop-blur-none: blur(0);
+    --backdrop-blur-sm: blur(4px);
+    --backdrop-blur: blur(8px);
+    --backdrop-blur-md: blur(12px);
+    --backdrop-blur-lg: blur(16px);
+    --backdrop-blur-xl: blur(24px);
+    --backdrop-blur-2xl: blur(40px);
+    --backdrop-blur-3xl: blur(64px);
 
     /* Animation */
     --animation-none: none;

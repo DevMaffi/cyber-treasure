@@ -8,7 +8,7 @@ import { PuzzlePieceIcon } from '@heroicons/react/24/solid'
 
 import { Skeleton } from '@/components/ui/Skeleton'
 
-import { CommandCenter } from '@/features/commandCenter'
+import { CommandCenter, CommandSearchTrigger } from '@/features/commandCenter'
 
 import styles from './Header.module.scss'
 
@@ -24,9 +24,12 @@ export default function Header() {
     return (
         <React.Fragment>
             <header className={styles.header}>
-                <Link href={'/'}>
-                    <PuzzlePieceIcon className={styles.logo} />
-                </Link>
+                <div className={styles.group}>
+                    <Link href={'/'}>
+                        <PuzzlePieceIcon className={styles.logo} />
+                    </Link>
+                    <CommandSearchTrigger />
+                </div>
                 <ThemeToggleBtn />
             </header>
             <CommandCenter />
