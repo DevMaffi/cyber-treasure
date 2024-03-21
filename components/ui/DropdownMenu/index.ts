@@ -1,16 +1,17 @@
-export { DropdownMenuTrigger } from './DropdownMenu'
-export { DropdownMenuContent } from './DropdownMenu'
-export { DropdownMenuItem } from './DropdownMenu'
-export { DropdownMenuCheckboxItem } from './DropdownMenu'
-export { DropdownMenuRadioItem } from './DropdownMenu'
-export { DropdownMenuLabel } from './DropdownMenu'
-export { DropdownMenuSeparator } from './DropdownMenu'
-export { DropdownMenuShortcut } from './DropdownMenu'
-export { DropdownMenuGroup } from './DropdownMenu'
-export { DropdownMenuPortal } from './DropdownMenu'
-export { DropdownMenuSub } from './DropdownMenu'
-export { DropdownMenuSubContent } from './DropdownMenu'
-export { DropdownMenuSubTrigger } from './DropdownMenu'
-export { DropdownMenuRadioGroup } from './DropdownMenu'
-
-export { default as DropdownMenu } from './DropdownMenu'
+export {
+    default as DropdownMenu,
+    DropdownMenuTrigger,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuCheckboxItem,
+    DropdownMenuRadioItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuShortcut,
+    DropdownMenuGroup,
+    DropdownMenuPortal,
+    DropdownMenuSub,
+    DropdownMenuSubContent,
+    DropdownMenuSubTrigger,
+    DropdownMenuRadioGroup,
+} from './DropdownMenu'

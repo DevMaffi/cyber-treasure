@@ -1,11 +1,12 @@
-export { DialogPortal } from './Dialog'
-export { DialogOverlay } from './Dialog'
-export { DialogTrigger } from './Dialog'
-export { DialogClose } from './Dialog'
-export { DialogContent } from './Dialog'
-export { DialogHeader } from './Dialog'
-export { DialogFooter } from './Dialog'
-export { DialogTitle } from './Dialog'
-export { DialogDescription } from './Dialog'
-
-export { default as Dialog } from './Dialog'
+export {
+    default as Dialog,
+    DialogPortal,
+    DialogOverlay,
+    DialogTrigger,
+    DialogClose,
+    DialogContent,
+    DialogHeader,
+    DialogFooter,
+    DialogTitle,
+    DialogDescription,
+} from './Dialog'

@@ -13,7 +13,7 @@ import type { ButtonCmp } from '@/components/ui/Button/variants'
 
 import styles from './Button.module.scss'
 
-const buttonVariants = cva(styles.btn, {
+export const buttonVariants = cva(styles.btn, {
     variants: {
         variant: {
             default: styles.btnDefaultVariant,
