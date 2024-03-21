@@ -3,7 +3,9 @@ import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import { Providers } from '@/components/providers'
+import { Providers } from '@/providers'
+
+import { RootShortcuts } from '@/components'
 
 import { cn } from '@/lib/utils'
 
@@ -28,6 +30,7 @@ export default function RootLayout(props: RootLayoutProps) {
         <html lang={'en'} suppressHydrationWarning>
             <body className={cn(inter.className)}>
                 <Providers>
+                    <RootShortcuts />
                     <Header />
                     {children}
                 </Providers>

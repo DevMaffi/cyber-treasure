@@ -2,10 +2,11 @@
 
 import React from 'react'
 
-import { ThemeProvider } from '@/components/providers/ThemeProvider'
-import { ShortcutsProvider } from '@/components/providers/ShortcutsProvider'
+import { ThemeProvider } from '@/providers/ThemeProvider'
 
 import { THEME_MODE } from '@/enums'
+
+import { CommandCenterContextProvider } from '@/features/commandCenter'
 
 type ProvidersProps = Readonly<{
     children: React.ReactNode
@@ -21,7 +22,9 @@ export default function Providers(props: ProvidersProps) {
             enableSystem
             disableTransitionOnChange
         >
-            <ShortcutsProvider>{children}</ShortcutsProvider>
+            <CommandCenterContextProvider>
+                {children}
+            </CommandCenterContextProvider>
         </ThemeProvider>
     )
 }
