@@ -6,7 +6,7 @@ import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu'
 
 import type { Variants } from 'framer-motion'
 
-import { CheckIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+import { CheckIcon, ChevronRightIcon } from '@heroicons/react/16/solid'
 
 import { cn } from '@/lib/utils'
 
