@@ -33,6 +33,11 @@
     --ring: 0 0 0 calc(8px + var(--ring-offset-width)) var(--ring-color);
 }
 
+/* Ring color */
+@mixin ring-ring {
+    --ring-color: hsl(var(--col-ring));
+}
+
 /* Ring offset width */
 @mixin ring-offset-0 {
     --ring-offset-width: 0px;
@@ -67,11 +72,6 @@
 
     --ring-offset: 0 0 0 var(--ring-offset-width)
         var(--ring-offset-color, hsl(var(--col-background)));
-}
-
-/* Ring color */
-@mixin ring-ring {
-    --ring-color: hsl(var(--col-ring));
 }
 
 /* Ring offset color */
