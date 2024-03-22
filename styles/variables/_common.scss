@@ -49,6 +49,15 @@
     --animation-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --animation-bounce: bounce 1s infinite;
 
-    --accordion-down: accordion-down 0.2s ease-out;
-    --accordion-up: accordion-up 0.2s ease-out;
+    --accordion-down: accordion-down 200ms ease-out;
+    --accordion-up: accordion-up 200ms ease-out;
+
+    --overlay-in: overlay-in 150ms linear;
+    --overlay-out: overlay-out 150ms linear;
+
+    --modal-in: modal-in 50ms linear;
+    --modal-out: modal-out 50ms linear;
+
+    --dropdown-in: dropdown-in 100ms linear;
+    --dropdown-out: dropdown-out 100ms linear;
 }

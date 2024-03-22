@@ -59,3 +59,75 @@
         height: var(--h-0);
     }
 }
+
+@keyframes overlay-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes overlay-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        scale: 0.95;
+        translate: -50% -48%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+        translate: -50% -50%;
+    }
+}
+
+@keyframes modal-out {
+    from {
+        opacity: 1;
+        scale: 1;
+        translate: -50% -50%;
+    }
+
+    to {
+        opacity: 0;
+        scale: 0.95;
+        translate: -50% -48%;
+    }
+}
+
+@keyframes dropdown-in {
+    from {
+        opacity: 0;
+        scale: 0.95;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes dropdown-out {
+    from {
+        opacity: 1;
+        scale: 1;
+    }
+
+    to {
+        opacity: 0;
+        scale: 0.95;
+    }
+}

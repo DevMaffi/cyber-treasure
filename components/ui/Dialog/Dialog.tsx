@@ -2,8 +2,6 @@
 
 import React from 'react'
 
-import type { Variants } from 'framer-motion'
-
 import { XMarkIcon } from '@heroicons/react/16/solid'
 
 import { cn } from '@/lib/utils'
@@ -47,26 +45,10 @@ export const DialogOverlay: DialogOverlayCmp = React.forwardRef(
 
         const DialogOverlay = DIALOG_ELEMENTS.Overlay
 
-        const overlayVariants: Variants = {
-            initial: {
-                opacity: 0,
-            },
-            target: {
-                opacity: 1,
-            },
-        }
-
         return (
             <DialogOverlay
                 ref={ref}
                 className={cn(styles.overlay, className)}
-                variants={overlayVariants}
-                initial={'initial'}
-                animate={'target'}
-                transition={{
-                    ease: 'linear',
-                    duration: 0.15,
-                }}
                 {...restProps}
             />
         )
@@ -80,30 +62,12 @@ export const DialogContent: DialogContentCmp = React.forwardRef(
 
         const DialogContent = DIALOG_ELEMENTS.Content
 
-        const contentVariants: Variants = {
-            initial: {
-                scale: 0.95,
-                translate: '-50% -48%',
-            },
-            target: {
-                scale: 1,
-                translate: '-50% -50%',
-            },
-        }
-
         return (
             <DialogPortal>
                 <DialogOverlay />
                 <DialogContent
                     ref={ref}
                     className={cn(styles.content, className)}
-                    variants={contentVariants}
-                    initial={'initial'}
-                    animate={'target'}
-                    transition={{
-                        ease: 'linear',
-                        duration: 0.05,
-                    }}
                     {...restProps}
                 >
                     {children}

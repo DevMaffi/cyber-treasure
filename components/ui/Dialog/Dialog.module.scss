@@ -5,15 +5,23 @@
 // inset-0 ✓
 // z-50 ~
 // bg-black/80 ✓
-// data-[state=open]:animate-in ×
-// data-[state=closed]:animate-out ×
-// data-[state=closed]:fade-out-0 ×
-// data-[state=open]:fade-in-0 ×
+// data-[state=open]:animate-in ✓
+// data-[state=closed]:animate-out ✓
+// data-[state=closed]:fade-out-0 ✓
+// data-[state=open]:fade-in-0 ✓
 .overlay {
     position: fixed;
     inset: var(--inset-0);
     background-color: hsl(var(--col-black) / 0.8);
     z-index: var(--z-modal);
+
+    &[data-state='open'] {
+        animation: var(--overlay-in);
+    }
+
+    &[data-state='closed'] {
+        animation: var(--overlay-out);
+    }
 }
 
 // fixed ✓
@@ -31,16 +39,16 @@
 // p-6 ✓
 // shadow-lg ✓
 // duration-200 ✓
-// data-[state=open]:animate-in ×
-// data-[state=closed]:animate-out ×
-// data-[state=closed]:fade-out-0 ×
-// data-[state=open]:fade-in-0 ×
-// data-[state=closed]:zoom-out-95 ×
-// data-[state=open]:zoom-in-95 ×
+// data-[state=open]:animate-in ✓
+// data-[state=closed]:animate-out ✓
+// data-[state=closed]:fade-out-0 ✓
+// data-[state=open]:fade-in-0 ✓
+// data-[state=closed]:zoom-out-95 ✓
+// data-[state=open]:zoom-in-95 ✓
 // data-[state=closed]:slide-out-to-left-1/2 ×
-// data-[state=closed]:slide-out-to-top-[48%] ×
+// data-[state=closed]:slide-out-to-top-[48%] ✓
 // data-[state=open]:slide-in-from-left-1/2 ×
-// data-[state=open]:slide-in-from-top-[48%] ×
+// data-[state=open]:slide-in-from-top-[48%] ✓
 // sm:rounded-lg ~
 .content {
     $duration: 200ms;
@@ -63,6 +71,14 @@
 
     @include sm {
         border-radius: var(--rounded-3xl);
+    }
+
+    &[data-state='open'] {
+        animation: var(--modal-in);
+    }
+
+    &[data-state='closed'] {
+        animation: var(--modal-out);
     }
 }
 
